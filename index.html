@@ -19,150 +19,405 @@
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="preload" href="./assets/fonts/serif-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <a class="skip" href="#about">跳到正文</a>
+  <a class="skip" href="#main">跳到正文</a>
+  <div class="grain" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
-    <div class="wrap">
-      <a class="nav-brand" href="#top">云外知行</a>
-      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="打开菜单"><span></span></button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">关于</a></li>
-        <li><a href="#services">服务</a></li>
-        <li><a href="#solutions">方案</a></li>
-        <li><a href="#contact">联系</a></li>
-      </ul>
+    <div class="wrap nav-row">
+      <a class="brand" href="#top" aria-label="云外知行 首页">
+        <span class="seal seal-sm" aria-hidden="true"><i>云外</i><i>知行</i></span>
+        <span class="brand-name">云外知行</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="主导航">
+        <a href="#daily">老板的日常</a>
+        <a href="#services">服务</a>
+        <a href="#products">产品</a>
+        <a href="#method">做事方式</a>
+        <a href="#resources">资料与教程</a>
+        <a class="nav-cta" href="#contact">加微信聊聊</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="打开菜单"><span></span><span></span></button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero" id="hero">
-      <div class="hero-inner">
-        <p class="hero-kicker">YUNWAIZHIXING</p>
-        <h1>云外知行</h1>
-        <div class="hero-rule"></div>
-        <p class="hero-slogan">把<span class="ai">AI</span>用进生意里</p>
-        <p class="hero-co">南京市江北新区云露漫想信息咨询服务工作室</p>
-        <p class="hero-lead">面向企业的 AI 落地服务。<br>我们从具体业务场景出发，把 AI 做到能用、能验收、能被团队接管。</p>
-        <a class="hero-cta" href="#contact">联系我们
-          <svg viewBox="0 0 28 8" aria-hidden="true"><path d="M0 4h26M22 1l5 3-5 3"/></svg>
-        </a>
-      </div>
-    </section>
-
-    <section class="sec" id="about">
+  <main id="main">
+    <!-- 首屏 -->
+    <section class="hero" id="top">
       <div class="wrap">
-        <header class="sec-h"><h2>关于我们</h2><span>ABOUT</span></header>
-        <p class="lead">云外知行是一家面向企业的 AI 落地服务工作室。<br>我们从具体业务场景出发，把 AI 做到能用、能验收、能被团队接管。</p>
-        <p class="about-body">我们深入真实业务流程，识别真正值得用 AI 的环节，把模糊的需求变成可配置、可审计、可评测、可接管的业务系统；产品与技术两侧都能对话，并通过培训、SOP 与反馈闭环，让 AI 在组织里真正用起来。</p>
+        <div class="hero-meta">
+          <span class="lab">AI 落地服务工作室</span>
+          <span class="lab">南京</span>
+          <span class="lab hide-sm">Yunwai Zhixing</span>
+          <span class="lab hero-scroll">向下浏览<svg viewBox="0 0 10 14" aria-hidden="true"><path d="M5 0v12M1 8l4 4 4-4"/></svg></span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line l1"><span class="w">把 <em class="latin">AI</em></span><span class="hero-seal" aria-hidden="true"><span class="seal seal-lg"><i>云外</i><i>知行</i></span></span></span>
+          <span class="line l2"><span class="w">用进生意里</span></span>
+        </h1>
+
+        <div class="hero-foot">
+          <p class="hero-lead"><span class="ph">从具体业务场景出发，</span><span class="ph">把 AI 做到<b>能用、能验收、</b></span><span class="ph"><b>能被团队接管</b>。</span></p>
+          <a class="btn btn-ink" href="#contact">
+            <span>加微信聊聊</span>
+            <svg viewBox="0 0 28 10" aria-hidden="true"><path d="M0 5h26M21 1l5 4-5 4"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="sec" id="services">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>场景识别</span><i></i><span>方案设计</span><i></i><span>小样验证</span><i></i><span>系统集成</span><i></i><span>交付验收</span><i></i><span>培训与 SOP</span><i></i><span>知识库</span><i></i><span>流程 Agent</span><i></i>
+        <span>场景识别</span><i></i><span>方案设计</span><i></i><span>小样验证</span><i></i><span>系统集成</span><i></i><span>交付验收</span><i></i><span>培训与 SOP</span><i></i><span>知识库</span><i></i><span>流程 Agent</span><i></i>
+      </div>
+    </div>
+
+    <!-- 关于 -->
+    <section class="sec about" id="about">
+      <div class="wrap grid">
+        <p class="sec-lab"><span class="num">00</span>关于</p>
+        <p class="statement reveal">云外知行是一家面向企业的 AI 落地服务工作室。<span class="soft">我们深入真实的业务流程，找到真正值得用 AI 的那一步，把模糊的想法做成可配置、可审计、可评测、可接管的业务系统。</span></p>
+      </div>
+    </section>
+
+    <!-- 老板的日常 -->
+    <section class="sec daily dark" id="daily">
+      <div class="wrap grid">
+        <p class="sec-lab"><span class="num">01</span>老板的日常</p>
+        <div class="sec-head">
+          <h2 class="h2 reveal"><span class="ph">这些事，</span><span class="ph">是不是天天都在发生？</span></h2>
+          <div class="daily-ctrl">
+            <button class="arrow" type="button" data-dir="-1" aria-label="上一张"><svg viewBox="0 0 20 12" aria-hidden="true"><path d="M20 6H2M7 1L2 6l5 5"/></svg></button>
+            <button class="arrow" type="button" data-dir="1" aria-label="下一张"><svg viewBox="0 0 20 12" aria-hidden="true"><path d="M0 6h18M13 1l5 5-5 5"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="daily-row" id="daily-row" tabindex="0" aria-label="老板的日常，可左右滑动">
+        <article class="pain"><span class="pain-n">日常 01</span><p><span class="ph">同样的问题，</span><span class="ph">客服一天</span><span class="ph">要回答好多遍。</span></p></article>
+        <article class="pain"><span class="pain-n">日常 02</span><p><span class="ph">晚上十点，</span><span class="ph">客户还在问价格，</span><span class="ph">没人回。</span></p></article>
+        <article class="pain"><span class="pain-n">日常 03</span><p><span class="ph">资料都有，</span><span class="ph">可要用的时候，</span><span class="ph">没人说得清放在哪儿。</span></p></article>
+        <article class="pain"><span class="pain-n">日常 04</span><p><span class="ph">老员工一走，</span><span class="ph">经验也跟着走了。</span></p></article>
+        <article class="pain"><span class="pain-n">日常 05</span><p><span class="ph">新人来了，</span><span class="ph">光是带上手，</span><span class="ph">就得好一阵。</span></p></article>
+        <article class="pain"><span class="pain-n">日常 06</span><p><span class="ph">报销、请假、审批，</span><span class="ph">表格填来填去。</span></p></article>
+        <article class="pain"><span class="pain-n">日常 07</span><p><span class="ph">AI 账号买了几个，</span><span class="ph">最后还是没人用。</span></p></article>
+        <article class="pain"><span class="pain-n">日常 08</span><p><span class="ph">想用 AI，</span><span class="ph">又怕公司资料传出去。</span></p></article>
+        <a class="pain pain-end" href="#services"><span class="pain-n">然后呢</span><p><span class="ph">这些事，</span><span class="ph">可以先让 AI</span> <span class="ph">接过去一部分。</span></p><span class="pain-go">看看我们做什么<svg viewBox="0 0 28 10" aria-hidden="true"><path d="M0 5h26M21 1l5 4-5 4"/></svg></span></a>
+      </div>
+      <div class="wrap"><div class="daily-bar"><span id="daily-bar"></span></div></div>
+    </section>
+
+    <!-- 六项服务 -->
+    <section class="sec services" id="services">
+      <div class="wrap grid">
+        <p class="sec-lab"><span class="num">02</span>六项服务</p>
+        <div class="sec-head">
+          <h2 class="h2 reveal"><span class="ph">不讲概念，</span><span class="ph">只管把事情做成。</span></h2>
+        </div>
+      </div>
       <div class="wrap">
-        <header class="sec-h"><h2>核心服务</h2><span>SERVICES</span></header>
-        <div class="svc">
-          <article class="svc-item"><div class="n">01</div><h3>企业 AI 落地（FDE）</h3><p>驻场式深入业务一线，从场景识别、方案设计到上线验收全程负责。</p></article>
-          <article class="svc-item"><div class="n">02</div><h3>知识库与可信问答</h3><p>文档处理与 RAG 架构；以知识隔离、越界拒答、来源追溯控制幻觉。</p></article>
-          <article class="svc-item"><div class="n">03</div><h3>流程自动化与 Agent</h3><p>Agent 负责理解，确定性代码负责执行；工具调用与人工兜底。</p></article>
-          <article class="svc-item"><div class="n">04</div><h3>模型与硬件选型</h3><p>结合数据安全、效果与预算，比较云端服务与本地私有化部署。</p></article>
-          <article class="svc-item"><div class="n">05</div><h3>AI 培训与 SOP</h3><p>面向团队的 AI 办公与应用培训，配套脱敏规范与复核机制。</p></article>
-          <article class="svc-item"><div class="n">06</div><h3>GEO 生成式引擎优化</h3><p>让企业信息在 AI 搜索与问答中被准确理解和引用。</p></article>
-        </div>
+        <ol class="svc">
+          <li class="svc-row reveal">
+            <span class="svc-n">01</span>
+            <h3 class="svc-t">企业 AI 落地<small>FDE</small></h3>
+            <div class="svc-d"><b>有人从头管到尾，直到真正上线。</b><p>深入业务一线，从找场景、出方案，到上线验收，全程负责。</p></div>
+          </li>
+          <li class="svc-row reveal">
+            <span class="svc-n">02</span>
+            <h3 class="svc-t">知识库与可信问答</h3>
+            <div class="svc-d"><b>资料问得到，答案说得出出处。</b><p>把散落的文档整理成知识库；不知道的不乱答，每个回答都能追溯来源。</p></div>
+          </li>
+          <li class="svc-row reveal">
+            <span class="svc-n">03</span>
+            <h3 class="svc-t">流程自动化与 Agent</h3>
+            <div class="svc-d"><b>重复的流程，交给机器去跑。</b><p>Agent 负责听懂需求，确定性的程序负责执行；关键环节留人工把关。</p></div>
+          </li>
+          <li class="svc-row reveal">
+            <span class="svc-n">04</span>
+            <h3 class="svc-t">模型与硬件选型</h3>
+            <div class="svc-d"><b>钱花在该花的地方。</b><p>结合数据安全、效果和预算，比较云端服务与本地私有化部署，给出合适的方案。</p></div>
+          </li>
+          <li class="svc-row reveal">
+            <span class="svc-n">05</span>
+            <h3 class="svc-t">AI 培训与 SOP</h3>
+            <div class="svc-d"><b>团队会用，也用得放心。</b><p>面向团队的 AI 办公与应用培训，配套脱敏规范和复核机制。</p></div>
+          </li>
+          <li class="svc-row reveal">
+            <span class="svc-n">06</span>
+            <h3 class="svc-t">GEO 生成式引擎优化</h3>
+            <div class="svc-d"><b>别人用 AI 搜索时，能把你说对。</b><p>让企业信息在 AI 搜索与问答中被准确理解、准确引用。</p></div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="sec" id="approach">
+    <!-- 产品 -->
+    <section class="sec products" id="products">
+      <div class="wrap grid">
+        <p class="sec-lab"><span class="num">03</span>产品</p>
+        <div class="sec-head">
+          <h2 class="h2 reveal"><span class="ph">做过的东西。</span></h2>
+        </div>
+      </div>
       <div class="wrap">
-        <header class="sec-h"><h2>服务方式</h2><span>APPROACH</span></header>
-        <div class="flow">
-          <div class="st"><i>1</i><b>需求澄清与流程拆解</b></div>
-          <div class="st"><i>2</i><b>方案设计与 PoC</b></div>
-          <div class="st"><i>3</i><b>系统集成</b></div>
-          <div class="st"><i>4</i><b>交付验收</b></div>
-          <div class="st"><i>5</i><b>培训与 SOP</b></div>
-        </div>
-        <div class="modes">
-          <article class="mode"><h3>陪跑指导</h3><p>团队自研，我们负责方向把关、方案评审与答疑。</p></article>
-          <article class="mode"><h3>承接交付</h3><p>从方案、PoC 到集成上线与验收，整体交付。</p></article>
+        <div class="posters">
+          <article class="poster p-green reveal">
+            <div class="poster-top"><span>产品 01</span><span class="latin">Voice Guide</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M20 80h8M36 60v40M50 44v72M64 66v28M78 30v100M92 52v56M106 70v20M120 18v124M134 56v48M148 38v84M162 64v32M176 48v64M190 72v16M204 58v44M218 78v4"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>AI 实时语音导览</h3>
+              <p>实时语音讲解，听的人随时可以打断、追问；只讲资料里有的内容，讲得准，也讲得可信。</p>
+            </div>
+          </article>
+          <article class="poster p-paper reveal">
+            <div class="poster-top"><span>产品 02</span><span class="latin">Sales Agent</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="34" y="26" width="112" height="64" rx="32"/>
+                <path d="M62 90l-10 20 26-20"/>
+                <rect x="94" y="64" width="112" height="64" rx="32"/>
+                <path d="M178 128l10 18-26-18"/>
+              </g>
+              <g fill="currentColor"><circle cx="128" cy="96" r="3"/><circle cx="150" cy="96" r="3"/><circle cx="172" cy="96" r="3"/></g>
+            </svg>
+            <div class="poster-body">
+              <h3>AI 销售客服智能体</h3>
+              <p>自动接待咨询、回答问题、跟进客户；遇到高意向或敏感的情况，及时转给人工。</p>
+            </div>
+          </article>
+          <article class="poster p-paper reveal">
+            <div class="poster-top"><span>产品 03</span><span class="latin">Private Knowledge</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="50" y="14" width="140" height="132"/>
+                <path d="M120 40l52 20-52 20-52-20z"/>
+                <path d="M68 76l52 20 52-20"/>
+                <path d="M68 92l52 20 52-20"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>企业私有化知识库</h3>
+              <p>部署在企业自己的环境里，数据不出企业；不懂技术的员工，也能用大白话直接查内部资料。</p>
+            </div>
+          </article>
+          <article class="poster p-green reveal">
+            <div class="poster-top"><span>产品 04</span><span class="latin">Workflow Agent</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="36" cy="80" r="14"/>
+                <rect x="96" y="20" width="48" height="32"/>
+                <rect x="96" y="108" width="48" height="32"/>
+                <circle cx="204" cy="80" r="14"/>
+                <path d="M50 80h22V36h24M72 80v44h24M144 36h24v44h22M144 124h24V80"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>企业流程 Agent</h3>
+              <p>说一句话就能发起报销、请假等流程；AI 负责理解，确定性的程序负责执行，结果稳定可控。</p>
+            </div>
+          </article>
+          <article class="poster p-green reveal">
+            <div class="poster-top"><span>产品 05</span><span class="latin">Live Collab</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="18" y="48" width="86" height="64" rx="4"/>
+                <circle cx="61" cy="80" r="20"/>
+                <circle cx="61" cy="80" r="8"/>
+                <path d="M118 36h104M118 56h88M118 76h96M118 96h72M118 116h84"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>AI 直播协作与话术系统</h3>
+              <p>给商家和主播用的直播协作平台。商家上传素材，AI 生成话术并绑定到每场直播，主播开播时直接看提词；从排期到收尾一条线管下来，也能限时把机位画面授权给指定主播。</p>
+            </div>
+          </article>
+          <article class="poster p-paper reveal">
+            <div class="poster-top"><span>产品 06</span><span class="latin">Content Ops</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="20" y="36" width="56" height="88" rx="2"/>
+                <rect x="92" y="36" width="56" height="88" rx="2"/>
+                <rect x="164" y="36" width="56" height="88" rx="2"/>
+                <path d="M76 80h16M148 80h16"/>
+                <path d="M32 56h32M32 72h24M32 88h28M104 56h32M104 72h24M176 56h32M176 72h20"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>AI 多平台内容运营工作流</h3>
+              <p>把课程、资料整理成可检索的素材库，再一条线做完选题、写稿、按各内容平台分别改写、审核排期和复盘。发布前自动查事实、隐私和版权，最后由人拍板才发出去。</p>
+            </div>
+          </article>
+          <article class="poster p-paper reveal">
+            <div class="poster-top"><span>产品 07</span><span class="latin">Office Kit</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M70 20h72l34 34v86H70z"/>
+                <path d="M142 20v34h34"/>
+                <path d="M90 78h60M90 96h48M90 114h54"/>
+                <circle cx="168" cy="118" r="16"/>
+                <path d="M161 118l5 5 11-12"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>AI 办公提效体验包</h3>
+              <p>用常用协作工具里的 AI 小工具配一套教程，拿自己的真实工作材料走一遍「测一下、算一下、做一下」，当场就能生成能用的成品。</p>
+            </div>
+          </article>
+          <article class="poster p-green reveal">
+            <div class="poster-top"><span>产品 08</span><span class="latin">Desktop Agent</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="28" y="22" width="140" height="96" rx="3"/>
+                <path d="M28 42h140M98 118v14h-28h68"/>
+                <rect x="88" y="54" width="108" height="80" rx="3"/>
+                <path d="M88 70h108"/>
+                <circle cx="176" cy="112" r="5"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>多会话电脑操作 Agent 平台</h3>
+              <p>让 AI 在独立的虚拟桌面里替人操作电脑，多个任务同时跑、互不干扰；过程可以实时看，断线了能接着看，出了故障会自动回收。</p>
+            </div>
+          </article>
+          <article class="poster p-green reveal">
+            <div class="poster-top"><span>产品 09</span><span class="latin">Delivery Kit</span></div>
+            <svg class="poster-art" viewBox="0 0 240 160" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="48" cy="40" r="10"/>
+                <circle cx="48" cy="80" r="10"/>
+                <circle cx="48" cy="120" r="10"/>
+                <path d="M44 44l3 3 7-8M44 84l3 3 7-8"/>
+                <path d="M74 40h120M74 80h96M74 120h108"/>
+                <path d="M48 50v20M48 90v20"/>
+              </g>
+            </svg>
+            <div class="poster-body">
+              <h3>AI 编程项目治理工具包</h3>
+              <p>给团队用 AI 写代码时配一套「先想清楚再动手」的流程：接手项目先摸底，需求没定、风险太高不让直接开发，交付要留证据、过验收。</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="sec" id="solutions">
+    <!-- 做事方式 -->
+    <section class="sec method" id="method">
+      <div class="wrap grid method-grid">
+        <div class="method-side">
+          <p class="sec-lab"><span class="num">04</span>我们怎么做事</p>
+          <h2 class="h2 reveal"><span class="ph">先把事情弄清楚，</span><span class="ph">再动手。</span></h2>
+          <p class="method-note">两种合作方式，按你团队的情况来选。</p>
+          <div class="modes">
+            <div class="mode"><h3>陪跑指导</h3><p>团队自己做，我们负责方向把关、方案评审与答疑。</p></div>
+            <div class="mode"><h3>承接交付</h3><p>从方案、小样到集成上线与验收，整体交付。</p></div>
+          </div>
+        </div>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-n">01</span><div><h3>弄清楚</h3><p class="step-k">需求澄清与流程拆解</p><p>跟一线的人一起把流程走一遍，找出真正值得用 AI 的那一步。</p></div></li>
+          <li class="step reveal"><span class="step-n">02</span><div><h3>做小样</h3><p class="step-k">方案设计与 PoC</p><p>先做一个能跑起来的小样，用真实的资料去试，效果说了算。</p></div></li>
+          <li class="step reveal"><span class="step-n">03</span><div><h3>接进去</h3><p class="step-k">系统集成</p><p>尽量接进团队现在用的工具和数据里，少改大家的习惯。</p></div></li>
+          <li class="step reveal"><span class="step-n">04</span><div><h3>验收</h3><p class="step-k">交付验收</p><p>按事先说好的标准逐项验收：能用、能查、能追溯。</p></div></li>
+          <li class="step reveal"><span class="step-n">05</span><div><h3>交给团队</h3><p class="step-k">培训与 SOP</p><p>配好培训和操作规范，之后团队自己就能接手。</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 创始人 -->
+    <section class="sec founder-sec" id="founder">
+      <div class="wrap grid">
+        <p class="sec-lab"><span class="num">05</span>创始人</p>
+        <div class="founder reveal">
+          <div class="founder-mark" aria-hidden="true">宫</div>
+          <div class="founder-text">
+            <p class="founder-name">宫静</p>
+            <p class="founder-role">创始人 / AI 落地工程师（FDE）</p>
+            <p class="founder-bio">兼具业务经营、产品设计与 AI 工程的复合背景，能深入一线理解业务，和业务、技术两边都说得上话，把 AI 从想法推进到上线与验收。</p>
+            <ul class="tags" aria-label="核心方法">
+              <li>RAG</li><li>Agent</li><li>工具调用</li><li>人工兜底</li><li>评测与幻觉控制</li><li>权限审计</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 资料与教程 -->
+    <section class="sec resources" id="resources">
+      <div class="wrap grid">
+        <p class="sec-lab"><span class="num">06</span>资料与教程</p>
+        <div class="sec-head">
+          <h2 class="h2 reveal"><span class="ph">做过的事，</span><span class="ph">慢慢写下来。</span></h2>
+          <a class="link-more" href="./resources/">进入资料库<svg viewBox="0 0 28 10" aria-hidden="true"><path d="M0 5h26M21 1l5 4-5 4"/></svg></a>
+        </div>
+      </div>
       <div class="wrap">
-        <header class="sec-h"><h2>解决方案案例</h2><span>SOLUTIONS</span></header>
-        <div class="cases">
-          <article class="case"><div class="n">01</div><h3>AI 实时语音导览</h3><p>面向文博场馆的实时语音讲解，观众可随时打断追问；以知识隔离、越界拒答与来源追溯确保讲解可信。</p></article>
-          <article class="case"><div class="n">02</div><h3>AI 销售客服智能体</h3><p>部署在企业微信，自动承接咨询、知识问答与客户触达；基于 RAG 与工具调用，高意向或敏感情况转人工。</p></article>
-          <article class="case"><div class="n">03</div><h3>企业私有化知识库</h3><p>本地私有化部署的文档问答，数据不出企业；非技术员工也能用自然语言直接查询内部资料。</p></article>
-          <article class="case"><div class="n">04</div><h3>企业流程 Agent</h3><p>用自然语言发起报销、请假等流程；Agent 负责理解，确定性代码负责执行，结果稳定可控。</p></article>
+        <p class="res-intro">方法、模板、草稿和上手教程，整理好之后会陆续放在这里。</p>
+        <div class="res-grid">
+          <article class="res-card reveal">
+            <div class="res-top"><span class="res-cat">教程</span><span class="pill">整理中</span></div>
+            <h3>上手教程</h3>
+            <p>一步一步跟着做，把 AI 用到日常工作里。</p>
+            <span class="res-foot">即将上线</span>
+          </article>
+          <article class="res-card reveal">
+            <div class="res-top"><span class="res-cat">资料</span><span class="pill">整理中</span></div>
+            <h3>模板与清单</h3>
+            <p>可以直接拿去用的表格、清单和规范。</p>
+            <span class="res-foot">即将上线</span>
+          </article>
+          <article class="res-card reveal">
+            <div class="res-top"><span class="res-cat">草稿</span><span class="pill">整理中</span></div>
+            <h3>思考与笔记</h3>
+            <p>还在打磨中的想法，先放出来一起讨论。</p>
+            <span class="res-foot">即将上线</span>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="sec" id="capabilities">
-      <div class="wrap split">
-        <div>
-          <header class="sec-h"><h2>技术能力</h2><span>CAPABILITIES</span></header>
-          <dl>
-            <div class="kv"><dt>核心方法</dt><dd>RAG · Agent · Tool Calling · 人工兜底（HITL）· 评测与幻觉控制 · 权限审计</dd></div>
-            <div class="kv"><dt>模型平台</dt><dd>DeepSeek · 通义千问 · 豆包 · Dify · 扣子 · 飞书</dd></div>
-            <div class="kv"><dt>工程实现</dt><dd>Python · FastAPI · TypeScript · Docker</dd></div>
-          </dl>
+    <!-- 联系 -->
+    <section class="contact dark" id="contact">
+      <div class="wrap grid">
+        <p class="sec-lab"><span class="num">07</span>联系</p>
+        <div class="contact-main">
+          <h2 class="contact-h reveal"><span class="ph">从一件具体的事，</span><span class="ph">开始聊。</span></h2>
+          <p class="contact-lab">手机 / 微信同号</p>
+          <a class="contact-tel" href="tel:+8613162370182">131 6237 0182</a>
+          <div class="contact-btns">
+            <a class="btn btn-cream" href="tel:+8613162370182"><span>直接打电话</span><svg viewBox="0 0 28 10" aria-hidden="true"><path d="M0 5h26M21 1l5 4-5 4"/></svg></a>
+            <button class="btn btn-line" type="button" id="copy-wx" data-copy="13162370182"><span>复制微信号</span></button>
+          </div>
+          <p class="contact-note">加微信时，搜索这个手机号即可。工作室在南京。</p>
         </div>
-        <div class="founder">
-          <header class="sec-h"><h2>创始人</h2><span>FOUNDER</span></header>
-          <p><span class="founder-name">宫静</span><span class="founder-role">创始人 / AI 落地工程师（FDE）</span></p>
-          <p>兼具业务经营、产品设计与 AI 工程的复合背景，能深入一线理解业务，与业务和技术两侧顺畅沟通，把 AI 从想法推进到上线与验收。</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <header class="sec-h"><h2>联系我们</h2><span>CONTACT</span></header>
-        <p class="contact-name">宫静</p>
-        <p class="contact-role">创始人 / AI 落地工程师（FDE）</p>
-        <p class="contact-lab">手机 / 微信同号</p>
-        <a class="contact-tel" href="tel:+8613162370182">131 6237 0182</a>
-        <p class="contact-co">南京市江北新区云露漫想信息咨询服务工作室</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-foot">
+  <footer class="foot">
     <div class="wrap">
-      <span>云外知行 · 把<span class="ai">AI</span>用进生意里</span>
-      <span>yunwaizhixing.com</span>
+      <div class="foot-top">
+        <div class="foot-brand">
+          <span class="seal seal-sm" aria-hidden="true"><i>云外</i><i>知行</i></span>
+          <div><p class="foot-name">云外知行</p><p class="foot-slogan">把 AI 用进生意里</p></div>
+        </div>
+        <nav class="foot-nav" aria-label="页脚导航">
+          <a href="#services">服务</a><a href="#products">产品</a><a href="#method">做事方式</a><a href="./resources/">资料与教程</a><a href="#contact">联系</a>
+        </nav>
+      </div>
+      <div class="foot-bot">
+        <span>南京市江北新区云露漫想信息咨询服务工作室</span>
+        <span class="latin">yunwaizhixing.com</span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    (function(){
-      var nav=document.getElementById('nav');
-      var btn=document.getElementById('nav-toggle');
-      var links=document.getElementById('nav-links');
-      var hero=document.getElementById('hero');
-      function solid(){
-        var cut=(hero?hero.offsetHeight:0)-nav.offsetHeight;
-        nav.classList.toggle('is-solid', window.scrollY>=cut-1);
-      }
-      solid();
-      window.addEventListener('scroll',solid,{passive:true});
-      window.addEventListener('resize',solid);
-      window.addEventListener('hashchange',solid);
-      window.addEventListener('load',solid);
-      function close(){nav.classList.remove('is-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','打开菜单');document.body.style.overflow='';}
-      function open(){nav.classList.add('is-open');btn.setAttribute('aria-expanded','true');btn.setAttribute('aria-label','关闭菜单');document.body.style.overflow='hidden';}
-      btn.addEventListener('click',function(){nav.classList.contains('is-open')?close():open();});
-      links.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
-    })();
-  </script>
+  <script src="./assets/js/main.js" defer></script>
 </body>
 </html>
